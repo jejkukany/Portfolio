@@ -3,7 +3,9 @@
 	padding: 0;
 	box-sizing: border-box;
 	color: #fff;
-    font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
+	scroll-behavior: smooth;
+    
 }
 .container {
 	max-width: 1300px;
@@ -58,21 +60,21 @@ nav ul li {
 	display: inline-block;
 	margin-right: 20px;
 }
-.header .row{
-    margin-top: 20%;
+.header .row {
+	margin-top: 20%;
 }
 
 a {
-    font-size: 20px;
+	font-size: 20px;
 	text-decoration: none;
 	color: #fff;
-    transition: all 0.50s;
-    border-radius: 22px;
-    padding: 10px;
+	transition: all 0.5s;
+	border-radius: 22px;
+	padding: 10px;
 }
-a:hover{
-    background-color: #fff;
-    color: #3b2f2f;
+a:hover {
+	background-color: #fff;
+	color: #3b2f2f;
 }
 .row {
 	align-items: center;
@@ -81,66 +83,142 @@ a:hover{
 	justify-content: space-around;
 }
 .col-2 {
-	flex-basis: 100%;
+	flex-basis: 50%;
 	min-width: 300px;
-    text-align: center;
+	text-align: center;
 }
 .col-2 h1 {
 	font-size: 50px;
 	line-height: 60px;
 	margin: 25px 0;
-    
 }
-.arrow {
-    display: inline-block;
-    margin-top: 22.5%;
-    border: solid #fff;
-    border-width: 0 10px 10px 0;
-    padding: 20px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-.hello::before{
-    content: 'Hello';
-    font-size: 100px;
-    animation-name: hello-animation;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+.hello::before {
+	content: "Hello";
+	font-size: 90px;
+    line-height: 1.6em;
+	animation-name: hello-animation;
+	animation-duration: 12.5s;
+	animation-iteration-count: infinite;
 }
 @keyframes hello-animation {
-    0% {content: 'A';}
-    3% {content: 'Ah';}
-    6% {content: 'Aho';}
-    9% {content: 'Ahoj';}
+	0% {
+		content: "A";
+	}
+	3% {
+		content: "Ah";
+	}
+	6% {
+		content: "Aho";
+	}
+	9% {
+		content: "Ahoj";
+	}
 
-    11% {content: 'こ';}
-    14% {content: 'こん';}
-    17% {content: 'こんに';}
-    20% {content: 'こんにち';}
-    23% {content: 'こんにちは';}
+	11% {
+		content: "こ";
+	}
+	14% {
+		content: "こん";
+	}
+	17% {
+		content: "こんに";
+	}
+	20% {
+		content: "こんにち";
+	}
+	23% {
+		content: "こんにちは";
+	}
 
-    28% {content: 'H';}
-    31% {content: 'Ho';}
-    34% {content: 'Hol';}
-    37% {content: 'Holl';}
-    40% {content: 'Holla';}
+	28% {
+		content: "H";
+	}
+	31% {
+		content: "Ho";
+	}
+	37% {
+		content: "Hol";
+	}
+	40% {
+		content: "Hola";
+	}
 
-    45% {content: 'B';}
-    48% {content: 'Bo';}
-    51% {content: 'Bon';}
-    54% {content: 'Bonj';}
-    57% {content: 'Bonjo';}
-    60% {content: 'Bonjou';}
-    63% {content: 'Bonjour';}
+	45% {
+		content: "B";
+	}
+	48% {
+		content: "Bo";
+	}
+	51% {
+		content: "Bon";
+	}
+	54% {
+		content: "Bonj";
+	}
+	57% {
+		content: "Bonjo";
+	}
+	60% {
+		content: "Bonjou";
+	}
+	63% {
+		content: "Bonjour";
+	}
 
-    68% {content: 'C';}
-    71% {content: 'Ci';}
-    74% {content: 'Cia';}
-    77% {content: 'Ciao';}
+	68% {
+		content: "C";
+	}
+	71% {
+		content: "Ci";
+	}
+	74% {
+		content: "Cia";
+	}
+	77% {
+		content: "Ciao";
+	}
 
-    82% {content: 'H';}
-    85% {content: 'He';}
-    88% {content: 'Hel';}
-    91% {content: 'Hell';}
-    94% {content: 'Hello';}
+	82% {
+		content: "H";
+	}
+	85% {
+		content: "He";
+	}
+	88% {
+		content: "Hel";
+	}
+	91% {
+		content: "Hell";
+	}
+	94% {
+		content: "Hello";
+	}
+}
+.about-me{
+    height: 100vh;
+    background-color: #4158d0;
+	background-image: linear-gradient(
+		43deg,
+		#4158d0 0%,
+		#c850c0 46%,
+		#ffcc70 100%
+	);
+}
+.about-me .row {
+	padding-top: 20%;
+}
+.about-me img {
+    max-width: 90%;
+	border-radius: 50px;
+	box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
+	-webkit-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
+	-moz-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
+}
+.about-me p{
+    font-size: 40px;
+}
+.projects{
+    height: 100vh;
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
 }
