@@ -222,3 +222,44 @@ a:hover {
     background-color: #A9C9FF;
     background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
 }
+.burger-menu{
+	visibility: hidden;
+}
+@media only screen and (max-width: 800px) {
+	nav ul {
+		position: absolute;
+		top: 90px;
+		left: 45%;
+		background: transparent;
+		width: 55%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+		line-height: 1.5em;
+	}
+	nav ul li {
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		padding: 5px;
+	}
+	nav ul li a {
+		color: #fff;
+	}
+	.burger-menu {
+		visibility: visible;
+		font-size: 2.0em;
+		display: block;
+		cursor: pointer;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.row {
+		text-align: center;
+	}
+	.col-2,
+	.col-3,
+	.col-4 {
+		flex-basis: 100%;
+	}
+}
