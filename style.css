@@ -5,76 +5,12 @@
 	color: #fff;
 	font-family: "Nunito", sans-serif;
 	scroll-behavior: smooth;
-    
 }
+/* Common objects */
 .container {
 	max-width: 1300px;
 	margin: auto;
 	padding: 25px 0 25px 0;
-}
-.header {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	-webkit-animation: gradient 15s ease infinite;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-}
-@-webkit-keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-.navbar {
-	display: flex;
-	align-items: center;
-	padding: 20px;
-}
-nav {
-	flex: 1;
-	text-align: right;
-}
-nav ul {
-	display: inline-block;
-	list-style: none;
-}
-
-nav ul li {
-	display: inline-block;
-	margin-right: 20px;
-}
-.header .row {
-	margin-top: 20%;
-}
-
-a {
-	font-size: 20px;
-	text-decoration: none;
-	color: #fff;
-	transition: all 0.5s;
-	border-radius: 22px;
-	padding: 10px;
-}
-a:hover {
-	background-color: #fff;
-	color: #3b2f2f;
 }
 .row {
 	align-items: center;
@@ -92,13 +28,194 @@ a:hover {
 	line-height: 60px;
 	margin: 25px 0;
 }
+.col-4{
+	flex-basis: 25%;
+	text-align: center;
+}
+a {
+	font-size: 20px;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.5s;
+	border-radius: 22px;
+	padding: 10px;
+}
+/* Nav Bar + Header */
+.header {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+.header .row {
+	margin-top: 25vh;
+}
+.navbar {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+}
+.navbar a:hover {
+	background-color: #fff;
+	color: #3b2f2f;
+}
+#MenuList {
+	flex: 1;
+	text-align: right;
+}
+#MenuList ul {
+	display: inline-block;
+	list-style: none;
+}
+
+#MenuList ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
 .hello::before {
 	content: "Hello";
 	font-size: 90px;
-    line-height: 1.6em;
+	line-height: 1.6em;
 	animation-name: hello-animation;
 	animation-duration: 12.5s;
 	animation-iteration-count: infinite;
+}
+/* About Me */
+.about-me {
+	/* 100vh deleted */
+	padding-bottom: 300px;
+	background-color: #ff3cac;
+	background-image: linear-gradient(
+		225deg,
+		#ff3cac 0%,
+		#784ba0 50%,
+		#2b86c5 100%
+	);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	animation: gradient 15s ease infinite;
+}
+.about-me .row {
+	padding-top: 20%;
+}
+.about-me img {
+	max-width: 90%;
+	border-radius: 50px;
+	box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
+	-webkit-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
+	-moz-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
+}
+.about-me p {
+	font-size: 40px;
+}
+.skills{
+	margin-top: 20px;
+}
+.skills h3{
+	font-size: 40px;
+}
+.skills ul{
+	list-style: none;
+	display:flex;
+}
+.skills li{
+	flex-basis: 30%;
+	padding: 25px;
+	font-size: 20px;
+}
+/* Projects */
+.projects {
+	height: 100vh;
+	background-color: #fa8bff;
+	background-image: linear-gradient(
+		45deg,
+		#fa8bff 0%,
+		#2bd2ff 52%,
+		#2bff88 90%
+	);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	animation: gradient 15s ease infinite;
+}
+.burger-menu {
+	visibility: hidden;
+}
+/* Smaller screen optimization */
+@media only screen and (max-width: 800px) {
+	#MenuList ul {
+		position: absolute;
+		top: 90px;
+		left: 45%;
+		background: transparent;
+		width: 55%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+		line-height: 1.6em;
+	}
+	#MenuList ul li {
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		padding: 5px;
+	}
+	#MenuList ul li a {
+		color: #fff;
+	}
+	.burger-menu {
+		visibility: visible;
+		font-size: 2em;
+		display: block;
+		cursor: pointer;
+	}
+	.skills li{
+		padding: 10px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.row {
+		text-align: center;
+	}
+	.col-2,
+	.col-4 {
+		flex-basis: 100%;
+	}
+	.hello::before{
+		font-size: 60px;
+	}
+}
+@media only screen and (orientation : landscape) and (max-width: 800px){
+	.header .row {
+		margin-top: -2vh;
+	}
+	.hello::before{
+		font-size: 60px;
+	}
+}
+/* Animations/Keyframes */
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 @keyframes hello-animation {
 	0% {
@@ -113,7 +230,6 @@ a:hover {
 	9% {
 		content: "Ahoj";
 	}
-
 	11% {
 		content: "こ";
 	}
@@ -129,7 +245,6 @@ a:hover {
 	23% {
 		content: "こんにちは";
 	}
-
 	28% {
 		content: "H";
 	}
@@ -142,7 +257,6 @@ a:hover {
 	40% {
 		content: "Hola";
 	}
-
 	45% {
 		content: "B";
 	}
@@ -164,7 +278,6 @@ a:hover {
 	63% {
 		content: "Bonjour";
 	}
-
 	68% {
 		content: "C";
 	}
@@ -177,7 +290,6 @@ a:hover {
 	77% {
 		content: "Ciao";
 	}
-
 	82% {
 		content: "H";
 	}
@@ -192,74 +304,5 @@ a:hover {
 	}
 	94% {
 		content: "Hello";
-	}
-}
-.about-me{
-    height: 100vh;
-    background-color: #4158d0;
-	background-image: linear-gradient(
-		43deg,
-		#4158d0 0%,
-		#c850c0 46%,
-		#ffcc70 100%
-	);
-}
-.about-me .row {
-	padding-top: 20%;
-}
-.about-me img {
-    max-width: 90%;
-	border-radius: 50px;
-	box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
-	-webkit-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
-	-moz-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
-}
-.about-me p{
-    font-size: 40px;
-}
-.projects{
-    height: 100vh;
-    background-color: #A9C9FF;
-    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
-}
-.burger-menu{
-	visibility: hidden;
-}
-@media only screen and (max-width: 800px) {
-	nav ul {
-		position: absolute;
-		top: 90px;
-		left: 45%;
-		background: transparent;
-		width: 55%;
-		overflow: hidden;
-		transition: max-height 0.5s;
-		line-height: 1.6em;
-	}
-	nav ul li {
-		display: block;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		margin-right: 10px;
-		padding: 5px;
-	}
-	nav ul li a {
-		color: #fff;
-	}
-	.burger-menu {
-		visibility: visible;
-		font-size: 2.0em;
-		display: block;
-		cursor: pointer;
-	}
-}
-@media only screen and (max-width: 600px) {
-	.row {
-		text-align: center;
-	}
-	.col-2,
-	.col-3,
-	.col-4 {
-		flex-basis: 100%;
 	}
 }
