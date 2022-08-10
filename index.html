@@ -4,37 +4,190 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
 		<link rel="stylesheet" href="style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<title>Daniel Young | Portfolio</title>
 	</head>
+
 	<body>
 		<div class="header">
-            <div class="container">
-                <div class="navbar">
-                    <div class="logo">
-                        <h1>Daniel Young</h1>
-                    </div>
-                    <nav>
-                        <ul id="MenuItems">
-                            <li><a href="">About Me</a></li>
-                            <li><a href="">Projects</a></li>
-                            <li><a href="">Contact Me</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="row">
-                    <div class="col-2">
-                        <h1><span class="hello"></span></h1>
-                        <h1>I'm Daniel</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-		<main></main>
-		<footer></footer>
+			<div class="container">
+				<div class="navbar">
+					<div class="logo">
+						<h1>Daniel Young</h1>
+					</div>
+					<div id="MenuList">
+						<ul id="MenuItems">
+							<li><a href="#about-me">About Me</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#contact-me">Contact Me</a></li>
+						</ul>
+					</div>
+					<i
+						class="fa-solid fa-bars burger-menu"
+						onclick="menutoggle()"
+					></i>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<h1><span class="hello"></span></h1>
+					<h1>I'm Daniel</h1>
+				</div>
+			</div>
+		</div>
+		<main class="main">
+			<div class="about-me" id="about-me">
+				<h1 class="about-me-heading">About Me</h1>
+				<div class="row">
+					<div class="col-2">
+						<img
+							src="pfp.gif"
+							alt="Daniel Young anime gif"
+							height="350px"
+						/>
+					</div>
+					<div class="col-2">
+						<p>
+							Hi, I’m a 15 year old self-taught developer from the
+							Czech republic.
+						</p>
+					</div>
+				</div>
+				<div class="skills">
+					<h3>My Skills</h3>
+					<ul>
+						<li>Python</li>
+						<li>HTML</li>
+						<li>CSS</li>
+					</ul>
+					<h3>Currently learning</h3>
+					<ul>
+						<li>Java Script</li>
+						<li>React JS</li>
+						<li>Next JS</li>
+						<li>Tailwind CSS</li>
+					</ul>
+				</div>
+			</div>
+			<div class="projects" id="projects">
+				<h1 class="projects-heading">Projects</h1>
+				<div class="row">
+					<div class="col-2">
+						<img
+							src="ATEMWebColab.png"
+							height="300px"
+							alt="ATEMColab Screenshot"
+						/>
+					</div>
+					<div class="col-2">
+						<h1>ATEMWebColab</h1>
+						<p>
+							My Python app to control the Blackmagic ATEM
+							devices.
+						</p>
+						<p>Used Technologies :</p>
+						<ul>
+							<li><a href="https://python.org">Python</a></li>
+							<li>
+								<a href="https://github.com/rawpython/remi"
+									>REMI</a
+								>
+							</li>
+							<li>
+								<a href="https://github.com/clvLabs/PyATEMMax"
+									>PyATEMMax</a
+								>
+							</li>
+						</ul>
+						<a
+							class="button"
+							alt="Github link"
+							href="https://github.com/Tranovice-SCEAV/ATEMWebColab"
+							><i class="fa-brands fa-github"></i
+						></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-2">
+						<img
+							src="Portfolio.png"
+							alt="Portfolio Screenshot"
+							height="250px"
+						/>
+					</div>
+					<div class="col-2">
+						<h1>Portfolio</h1>
+						<p>My portfolio for my pasion and projects.</p>
+						<p>Used Technologies :</p>
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JS</li>
+						</ul>
+						<a
+							class="button"
+							alt="Github link"
+							href="https://github.com/jejkukany/Portfolio"
+							><i class="fa-brands fa-github"></i
+						></a>
+					</div>
+				</div>
+			</div>
+			<div class="contact-me" id="contact-me">
+				<h1 class="contact-me-heading">Contact Me</h1>
+				<p>Don't hesitate to contact me.</p>
+				<h3>young256daniel@gmail.com</h3>
+				<div class="row">
+					<div class="col-4">
+						<a href="https://discord.com/users/589782535005929486"><i class="fab fa-discord"></i></a>
+					</div>
+					<div class="col-4">
+						<a href="https://www.linkedin.com/in/daniel-young-a7a244240/"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+					<div class="col-4">
+						<a
+							href="https://www.instagram.com/daniel_young_jejkukany/"
+							><i class="fab fa-instagram"></i
+						></a>
+					</div>
+					<div class="col-4">
+						<a href="https://twitter.com/jejkukany"
+							><i class="fab fa-twitter"></i
+						></a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<hr />
+			<p>danielyoung.space by Daniel Young</p>
+		</footer>
+		<script>
+			//Burger Menu
+			var MenuItems = document.getElementById("MenuItems");
+
+			MenuItems.style.maxHeight = "0px";
+
+			function menutoggle() {
+				if (MenuItems.style.maxHeight == "0px") {
+					MenuItems.style.maxHeight = "200px";
+				} else {
+					MenuItems.style.maxHeight = "0px";
+				}
+			}
+		</script>
 	</body>
 </html>

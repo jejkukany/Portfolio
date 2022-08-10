@@ -3,13 +3,83 @@
 	padding: 0;
 	box-sizing: border-box;
 	color: #fff;
-    font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
+	scroll-behavior: smooth;
 }
+body {
+	overflow: overlay;
+}
+/* Scroll bar */
+::-webkit-scrollbar {
+	width: 5px;
+	background: transparent;
+}
+::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.35);
+	border-radius: 22px;
+}
+::-webkit-scrollbar-thumb {
+	background: #fff;
+	border-radius: 22px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+/* Common objects */
 .container {
 	max-width: 1300px;
 	margin: auto;
 	padding: 25px 0 25px 0;
 }
+.row {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.col-2 {
+	flex-basis: 50%;
+	min-width: 300px;
+	text-align: center;
+}
+.col-2 h1 {
+	font-size: 50px;
+	line-height: 60px;
+	margin: 25px 0;
+}
+.col-3 {
+	flex-basis: 33.3%;
+	text-align: center;
+}
+.col-4 {
+	flex-basis: 25%;
+	text-align: center;
+}
+a {
+	font-size: 20px;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.5s;
+	border-radius: 22px;
+	padding: 10px;
+}
+.button {
+	display: inline-block;
+	margin: 30px;
+	padding: 15px 30px;
+	color: #3b2f2f;
+	background-color: #fff;
+	border-radius: 22px;
+}
+.button i {
+	color: #3b2f2f;
+	font-size: 35px;
+}
+.button:hover {
+	transform: translateY(-5px);
+}
+
+/* Nav Bar + Header */
 .header {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
@@ -17,6 +87,261 @@
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
+.header .row {
+	margin-top: 25vh;
+}
+.navbar {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+}
+#MenuItems a:hover {
+	background-color: #fff;
+	color: #3b2f2f;
+}
+.burger-menu {
+	visibility: hidden;
+}
+#MenuList {
+	flex: 1;
+	text-align: right;
+}
+#MenuList ul {
+	display: inline-block;
+	list-style: none;
+}
+
+#MenuList ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.hello::before {
+	content: "Hello";
+	font-size: 90px;
+	line-height: 1.6em;
+	animation-name: hello-animation;
+	animation-duration: 12.5s;
+	animation-iteration-count: infinite;
+}
+/* About Me */
+.about-me {
+	padding-bottom: 50px;
+	background-color: #ff3cac;
+	background-image: linear-gradient(
+		225deg,
+		#ff3cac 0%,
+		#784ba0 50%,
+		#2b86c5 100%
+	);
+}
+.about-me-heading {
+	padding: 100px 0;
+	text-align: center;
+	font-size: 50px;
+}
+.about-me img {
+	max-width: 90%;
+	border-radius: 50px;
+	box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
+	-webkit-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
+	-moz-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
+}
+.about-me .row {
+	padding-bottom: 50px;
+}
+.about-me p {
+	font-size: 40px;
+	max-width: 80%;
+	margin: auto;
+}
+.skills {
+	margin-top: 20px;
+}
+.skills h3 {
+	text-align: center;
+	font-size: 40px;
+}
+.skills ul {
+	list-style: none;
+	display: flex;
+	padding: 100px 0;
+}
+.skills li {
+	flex-basis: 33.3%;
+	padding: 25px;
+	font-size: 30px;
+	text-align: center;
+}
+/* Projects */
+.projects {
+	padding-bottom: 50px;
+	background-color: #fa8bff;
+	background-image: linear-gradient(
+		45deg,
+		#fa8bff 0%,
+		#2bd2ff 52%,
+		#2bff88 90%
+	);
+}
+.projects h1 {
+	font-size: 40px;
+}
+.projects .projects-heading {
+	padding: 80px 0;
+	text-align: center;
+	font-size: 50px;
+}
+.projects img {
+	width: 85%;
+	height: auto;
+	border-radius: 22px;
+	transition: all 0.5s;
+	border: 2px white solid;
+}
+.projects img:hover {
+	transform: translateY(-5px);
+}
+.projects .button {
+	width: 100px;
+	align-items: center;
+}
+.projects .row {
+	padding: 50px;
+}
+.projects p {
+	font-size: 25px;
+}
+.projects ul {
+	list-style: none;
+	display: flex;
+}
+.projects li {
+	line-height: 1.6em;
+	flex-basis: 33.3%;
+	padding: 25px;
+	font-size: 20px;
+	align-content: space-around;
+}
+.contact-me .social-media {
+	padding: 20px;
+}
+.contact-me .social-media ul {
+	list-style: none;
+}
+.contact-me .social-media li {
+	display: inline-block;
+	flex-basis: 25%;
+}
+/* Contact Me */
+.contact-me {
+	background-color: #3eecac;
+	background-image: linear-gradient(19deg, #3eecac 0%, #ee74e1 100%);
+}
+.contact-me .contact-me-heading {
+	padding: 80px 0;
+	text-align: center;
+	font-size: 50px;
+}
+.contact-me p {
+	text-align: center;
+	font-size: 35px;
+}
+.contact-me h3 {
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+}
+.contact-me .row {
+	padding: 100px;
+}
+.contact-me i {
+	font-size: 50px;
+	transition: all 0.5s;
+}
+.contact-me i:hover {
+	transform: translateY(-5px);
+}
+/* Footer */
+footer {
+	padding-top: 20px;
+	background-color: #262626;
+	text-align: center;
+}
+footer p {
+	padding-top: 25px;
+	padding-bottom: 10px;
+}
+/* Smaller screen optimization */
+@media only screen and (max-width: 800px) {
+	#MenuList ul {
+		position: absolute;
+		top: 90px;
+		left: 45%;
+		background: transparent;
+		width: 55%;
+		overflow: hidden;
+		transition: max-height 0.5s;
+		line-height: 1.6em;
+	}
+	#MenuList ul li {
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		padding: 5px;
+	}
+	#MenuList ul li a {
+		color: #fff;
+	}
+	.burger-menu {
+		visibility: visible;
+		font-size: 2em;
+		display: block;
+		cursor: pointer;
+	}
+	.col-2,
+	.col-3,
+	.col-4 {
+		flex-basis: 100%;
+	}
+	footer .col-3 {
+		flex-basis: 33.3%;
+	}
+	.skills li,
+	.projects li {
+		padding: 8px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.row {
+		text-align: center;
+	}
+	.col-2 {
+		flex-basis: 100%;
+	}
+	.skills li {
+		font-size: 22.5px;
+	}
+	.hello::before {
+		font-size: 60px;
+	}
+	.about-me img {
+		height: 200px;
+	}
+	.about-me p {
+		font-size: 35px;
+	}
+}
+@media only screen and (orientation: landscape) and (max-width: 800px) {
+	.header .row {
+		margin-top: -2vh;
+	}
+	.hello::before {
+		font-size: 60px;
+	}
+}
+/* Animations/Keyframes */
 @-webkit-keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -28,7 +353,6 @@
 		background-position: 0% 50%;
 	}
 }
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -40,107 +364,92 @@
 		background-position: 0% 50%;
 	}
 }
-.navbar {
-	display: flex;
-	align-items: center;
-	padding: 20px;
-}
-nav {
-	flex: 1;
-	text-align: right;
-}
-nav ul {
-	display: inline-block;
-	list-style: none;
-}
-
-nav ul li {
-	display: inline-block;
-	margin-right: 20px;
-}
-.header .row{
-    margin-top: 20%;
-}
-
-a {
-    font-size: 20px;
-	text-decoration: none;
-	color: #fff;
-    transition: all 0.50s;
-    border-radius: 22px;
-    padding: 10px;
-}
-a:hover{
-    background-color: #fff;
-    color: #3b2f2f;
-}
-.row {
-	align-items: center;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-.col-2 {
-	flex-basis: 100%;
-	min-width: 300px;
-    text-align: center;
-}
-.col-2 h1 {
-	font-size: 50px;
-	line-height: 60px;
-	margin: 25px 0;
-    
-}
-.arrow {
-    display: inline-block;
-    margin-top: 22.5%;
-    border: solid #fff;
-    border-width: 0 10px 10px 0;
-    padding: 20px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-.hello::before{
-    content: 'Hello';
-    font-size: 100px;
-    animation-name: hello-animation;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
 @keyframes hello-animation {
-    0% {content: 'A';}
-    3% {content: 'Ah';}
-    6% {content: 'Aho';}
-    9% {content: 'Ahoj';}
-
-    11% {content: 'こ';}
-    14% {content: 'こん';}
-    17% {content: 'こんに';}
-    20% {content: 'こんにち';}
-    23% {content: 'こんにちは';}
-
-    28% {content: 'H';}
-    31% {content: 'Ho';}
-    34% {content: 'Hol';}
-    37% {content: 'Holl';}
-    40% {content: 'Holla';}
-
-    45% {content: 'B';}
-    48% {content: 'Bo';}
-    51% {content: 'Bon';}
-    54% {content: 'Bonj';}
-    57% {content: 'Bonjo';}
-    60% {content: 'Bonjou';}
-    63% {content: 'Bonjour';}
-
-    68% {content: 'C';}
-    71% {content: 'Ci';}
-    74% {content: 'Cia';}
-    77% {content: 'Ciao';}
-
-    82% {content: 'H';}
-    85% {content: 'He';}
-    88% {content: 'Hel';}
-    91% {content: 'Hell';}
-    94% {content: 'Hello';}
+	0% {
+		content: "A";
+	}
+	3% {
+		content: "Ah";
+	}
+	6% {
+		content: "Aho";
+	}
+	9% {
+		content: "Ahoj";
+	}
+	11% {
+		content: "こ";
+	}
+	14% {
+		content: "こん";
+	}
+	17% {
+		content: "こんに";
+	}
+	20% {
+		content: "こんにち";
+	}
+	23% {
+		content: "こんにちは";
+	}
+	28% {
+		content: "H";
+	}
+	31% {
+		content: "Ho";
+	}
+	37% {
+		content: "Hol";
+	}
+	40% {
+		content: "Hola";
+	}
+	45% {
+		content: "B";
+	}
+	48% {
+		content: "Bo";
+	}
+	51% {
+		content: "Bon";
+	}
+	54% {
+		content: "Bonj";
+	}
+	57% {
+		content: "Bonjo";
+	}
+	60% {
+		content: "Bonjou";
+	}
+	63% {
+		content: "Bonjour";
+	}
+	68% {
+		content: "C";
+	}
+	71% {
+		content: "Ci";
+	}
+	74% {
+		content: "Cia";
+	}
+	77% {
+		content: "Ciao";
+	}
+	82% {
+		content: "H";
+	}
+	85% {
+		content: "He";
+	}
+	88% {
+		content: "Hel";
+	}
+	91% {
+		content: "Hell";
+	}
+	94% {
+		content: "Hello";
+	}
 }
