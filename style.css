@@ -223,25 +223,54 @@ a {
 	font-size: 20px;
 	align-content: space-around;
 }
+.contact-me .social-media {
+	padding: 20px;
+}
+.contact-me .social-media ul {
+	list-style: none;
+}
+.contact-me .social-media li {
+	display: inline-block;
+	flex-basis: 25%;
+}
+/* Contact Me */
+.contact-me {
+	background-color: #3eecac;
+	background-image: linear-gradient(19deg, #3eecac 0%, #ee74e1 100%);
+}
+.contact-me .contact-me-heading {
+	padding: 80px 0;
+	text-align: center;
+	font-size: 50px;
+}
+.contact-me p {
+	text-align: center;
+	font-size: 35px;
+}
+.contact-me h3 {
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+}
+.contact-me .row {
+	padding: 100px;
+}
+.contact-me i {
+	font-size: 50px;
+	transition: all 0.5s;
+}
+.contact-me i:hover {
+	transform: translateY(-5px);
+}
 /* Footer */
 footer {
+	padding-top: 20px;
 	background-color: #262626;
 	text-align: center;
 }
-footer .row {
-	width: 65%;
-	margin: auto;
-	padding: 20px 0;
-}
-footer i {
-	font-size: 45px;
-	transition: all 0.5s;
-}
-footer i:hover {
-	transform: translateY(-5px);
-}
 footer p {
-	padding: 10px;
+	padding-top: 25px;
+	padding-bottom: 10px;
 }
 /* Smaller screen optimization */
 @media only screen and (max-width: 800px) {
@@ -288,11 +317,10 @@ footer p {
 	.row {
 		text-align: center;
 	}
-	.col-2,
-	.col-4 {
+	.col-2 {
 		flex-basis: 100%;
 	}
-	.skills li{
+	.skills li {
 		font-size: 22.5px;
 	}
 	.hello::before {
