@@ -40,6 +40,22 @@ a {
 	border-radius: 22px;
 	padding: 10px;
 }
+.button{
+	display: inline-block;
+	margin: 30px;
+	padding: 15px 30px;
+	color: #3b2f2f;
+	background-color: #fff;
+	border-radius: 22px;
+}
+.button i{
+	color: #3b2f2f;
+	font-size: 35px;
+}
+.button:hover{
+	transform: translateY(-5px);
+}
+
 /* Nav Bar + Header */
 .header {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -59,6 +75,9 @@ a {
 .navbar a:hover {
 	background-color: #fff;
 	color: #3b2f2f;
+}
+.burger-menu {
+	visibility: hidden;
 }
 #MenuList {
 	flex: 1;
@@ -85,7 +104,7 @@ a {
 /* About Me */
 .about-me {
 	/* 100vh deleted */
-	padding-bottom: 300px;
+	padding-bottom: 200px;
 	background-color: #ff3cac;
 	background-image: linear-gradient(
 		225deg,
@@ -97,8 +116,10 @@ a {
 	-webkit-animation: gradient 15s ease infinite;
 	animation: gradient 15s ease infinite;
 }
-.about-me .row {
-	padding-top: 20%;
+.about-me-heading{
+	padding: 100px 0;
+	text-align: center;
+	font-size: 50px;
 }
 .about-me img {
 	max-width: 90%;
@@ -107,6 +128,9 @@ a {
 	-webkit-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
 	-moz-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
 }
+.about-me .row{
+	padding-bottom: 50px;
+}
 .about-me p {
 	font-size: 40px;
 }
@@ -114,20 +138,23 @@ a {
 	margin-top: 20px;
 }
 .skills h3{
+	text-align: center;
 	font-size: 40px;
 }
 .skills ul{
 	list-style: none;
 	display:flex;
+	padding: 100px 0;
 }
 .skills li{
 	flex-basis: 30%;
 	padding: 25px;
 	font-size: 20px;
+	text-align: center;
 }
 /* Projects */
 .projects {
-	height: 100vh;
+	padding-bottom: 100px;
 	background-color: #fa8bff;
 	background-image: linear-gradient(
 		45deg,
@@ -139,9 +166,46 @@ a {
 	-webkit-animation: gradient 15s ease infinite;
 	animation: gradient 15s ease infinite;
 }
-.burger-menu {
-	visibility: hidden;
+￼
+.projects-heading{
+	padding: 100px 0;
+	text-align: center;
+	font-size: 50px;
 }
+.projects img{
+	width: 85%;
+	height: auto;
+	border-radius: 22px;
+	transition: all 0.5s;
+	border: 2px white solid;
+
+}
+.projects h1{
+	font-size: 40px;
+}
+.projects img:hover{
+	transform: translateY(-5px);
+}
+.projects .button{
+	width: 100px;
+	align-items: center;
+}
+.projects .row {
+	padding: 100px;
+}
+.projects p{
+	font-size: 25px;
+}
+.projects ul{
+	list-style: none;
+	display:flex;
+}
+.projects li{
+	flex-basis: 30%;
+	padding: 25px;
+	font-size: 20px;
+}
+
 /* Smaller screen optimization */
 @media only screen and (max-width: 800px) {
 	#MenuList ul {
@@ -170,7 +234,8 @@ a {
 		display: block;
 		cursor: pointer;
 	}
-	.skills li{
+	.skills li,
+	.projects li{
 		padding: 10px;
 	}
 }
@@ -184,6 +249,9 @@ a {
 	}
 	.hello::before{
 		font-size: 60px;
+	}
+	.about-me img{
+		height: 200px;
 	}
 }
 @media only screen and (orientation : landscape) and (max-width: 800px){
