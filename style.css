@@ -6,6 +6,25 @@
 	font-family: "Nunito", sans-serif;
 	scroll-behavior: smooth;
 }
+body {
+	overflow: overlay;
+}
+/* Scroll bar */
+::-webkit-scrollbar {
+	width: 5px;
+	background: transparent;
+}
+::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.35);
+	border-radius: 22px;
+}
+::-webkit-scrollbar-thumb {
+	background: #fff;
+	border-radius: 22px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
 /* Common objects */
 .container {
 	max-width: 1300px;
@@ -28,7 +47,11 @@
 	line-height: 60px;
 	margin: 25px 0;
 }
-.col-4{
+.col-3 {
+	flex-basis: 33.3%;
+	text-align: center;
+}
+.col-4 {
 	flex-basis: 25%;
 	text-align: center;
 }
@@ -40,7 +63,7 @@ a {
 	border-radius: 22px;
 	padding: 10px;
 }
-.button{
+.button {
 	display: inline-block;
 	margin: 30px;
 	padding: 15px 30px;
@@ -48,11 +71,11 @@ a {
 	background-color: #fff;
 	border-radius: 22px;
 }
-.button i{
+.button i {
 	color: #3b2f2f;
 	font-size: 35px;
 }
-.button:hover{
+.button:hover {
 	transform: translateY(-5px);
 }
 
@@ -72,7 +95,7 @@ a {
 	align-items: center;
 	padding: 20px;
 }
-.navbar a:hover {
+#MenuItems a:hover {
 	background-color: #fff;
 	color: #3b2f2f;
 }
@@ -103,8 +126,7 @@ a {
 }
 /* About Me */
 .about-me {
-	/* 100vh deleted */
-	padding-bottom: 200px;
+	padding-bottom: 50px;
 	background-color: #ff3cac;
 	background-image: linear-gradient(
 		225deg,
@@ -112,11 +134,8 @@ a {
 		#784ba0 50%,
 		#2b86c5 100%
 	);
-	background-size: 400% 400%;
-	-webkit-animation: gradient 15s ease infinite;
-	animation: gradient 15s ease infinite;
 }
-.about-me-heading{
+.about-me-heading {
 	padding: 100px 0;
 	text-align: center;
 	font-size: 50px;
@@ -128,33 +147,35 @@ a {
 	-webkit-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
 	-moz-box-shadow: 8px 7px 5px -6px rgba(0, 0, 0, 0.52);
 }
-.about-me .row{
+.about-me .row {
 	padding-bottom: 50px;
 }
 .about-me p {
 	font-size: 40px;
+	max-width: 80%;
+	margin: auto;
 }
-.skills{
+.skills {
 	margin-top: 20px;
 }
-.skills h3{
+.skills h3 {
 	text-align: center;
 	font-size: 40px;
 }
-.skills ul{
+.skills ul {
 	list-style: none;
-	display:flex;
+	display: flex;
 	padding: 100px 0;
 }
-.skills li{
-	flex-basis: 30%;
+.skills li {
+	flex-basis: 33.3%;
 	padding: 25px;
-	font-size: 20px;
+	font-size: 30px;
 	text-align: center;
 }
 /* Projects */
 .projects {
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 	background-color: #fa8bff;
 	background-image: linear-gradient(
 		45deg,
@@ -162,50 +183,66 @@ a {
 		#2bd2ff 52%,
 		#2bff88 90%
 	);
-	background-size: 400% 400%;
-	-webkit-animation: gradient 15s ease infinite;
-	animation: gradient 15s ease infinite;
 }
-￼
-.projects-heading{
-	padding: 100px 0;
+.projects h1 {
+	font-size: 40px;
+}
+.projects .projects-heading {
+	padding: 80px 0;
 	text-align: center;
 	font-size: 50px;
 }
-.projects img{
+.projects img {
 	width: 85%;
 	height: auto;
 	border-radius: 22px;
 	transition: all 0.5s;
 	border: 2px white solid;
-
 }
-.projects h1{
-	font-size: 40px;
-}
-.projects img:hover{
+.projects img:hover {
 	transform: translateY(-5px);
 }
-.projects .button{
+.projects .button {
 	width: 100px;
 	align-items: center;
 }
 .projects .row {
-	padding: 100px;
+	padding: 50px;
 }
-.projects p{
+.projects p {
 	font-size: 25px;
 }
-.projects ul{
+.projects ul {
 	list-style: none;
-	display:flex;
+	display: flex;
 }
-.projects li{
-	flex-basis: 30%;
+.projects li {
+	line-height: 1.6em;
+	flex-basis: 33.3%;
 	padding: 25px;
 	font-size: 20px;
+	align-content: space-around;
 }
-
+/* Footer */
+footer {
+	background-color: #262626;
+	text-align: center;
+}
+footer .row {
+	width: 65%;
+	margin: auto;
+	padding: 20px 0;
+}
+footer i {
+	font-size: 45px;
+	transition: all 0.5s;
+}
+footer i:hover {
+	transform: translateY(-5px);
+}
+footer p {
+	padding: 10px;
+}
 /* Smaller screen optimization */
 @media only screen and (max-width: 800px) {
 	#MenuList ul {
@@ -234,9 +271,17 @@ a {
 		display: block;
 		cursor: pointer;
 	}
+	.col-2,
+	.col-3,
+	.col-4 {
+		flex-basis: 100%;
+	}
+	footer .col-3 {
+		flex-basis: 33.3%;
+	}
 	.skills li,
-	.projects li{
-		padding: 10px;
+	.projects li {
+		padding: 8px;
 	}
 }
 @media only screen and (max-width: 600px) {
@@ -247,18 +292,24 @@ a {
 	.col-4 {
 		flex-basis: 100%;
 	}
-	.hello::before{
+	.skills li{
+		font-size: 22.5px;
+	}
+	.hello::before {
 		font-size: 60px;
 	}
-	.about-me img{
+	.about-me img {
 		height: 200px;
 	}
+	.about-me p {
+		font-size: 35px;
+	}
 }
-@media only screen and (orientation : landscape) and (max-width: 800px){
+@media only screen and (orientation: landscape) and (max-width: 800px) {
 	.header .row {
 		margin-top: -2vh;
 	}
-	.hello::before{
+	.hello::before {
 		font-size: 60px;
 	}
 }
