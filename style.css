@@ -301,12 +301,11 @@ footer p {
 		cursor: pointer;
 	}
 	.col-2,
-	.col-3,
-	.col-4 {
+	.col-3 {
 		flex-basis: 100%;
 	}
-	footer .col-3 {
-		flex-basis: 33.3%;
+	.contact-me .row {
+		padding: 100px 10px;
 	}
 	.skills li,
 	.projects li {
@@ -331,6 +330,9 @@ footer p {
 	}
 	.about-me p {
 		font-size: 35px;
+	}
+	.contact-me h3 {
+		font-size: 20px;
 	}
 }
 @media only screen and (orientation: landscape) and (max-width: 800px) {
