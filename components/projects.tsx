@@ -9,7 +9,7 @@ const projects = () => {
   const projectsArrDescrition = [
     "This is a quiz centered around Christmas. It uses Firebase for authentication and storing questions and answers. The username is user@gmail.com and the password is user1234",
   ];
-  const projectArrLink = ["https://quiz.danielyoung.space/"];
+  const projectArrLink = ["https://christmas-quiz-ten.vercel.app/"];
   return projectsArrName.map((element, id) => (
     <motion.div
       className="flex flex-col md:flex-row p-10 text-center md:text-left max-h-[500px]"
