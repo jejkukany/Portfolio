@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
+import { HiGlobeAlt } from "react-icons/hi";
 
 
 const projects = () => {
-  const projectsArrName = ["Christmas Quiz"];
-  const projectsArrImage = ["/ChristmasQuiz.png"];
-  const projectsArrDescrition = [
-    "This is a quiz centered around Christmas. It uses Firebase for authentication and storing questions and answers. The username is user@gmail.com and the password is user1234",
+  const projectsArrName = ["Christmas quiz", "Dorost Třanovice Web", "Portfolio"];
+  const projectsArrImage = ["/ChristmasQuiz.png", "/DorostWeb.jpeg", "/Portfolio.jpeg"];
+  const projectsArrDescription = [
+    "A Quiz about the typical Czech Christmas. Firebase is used as the authentication and DB service. React for frontend. Vite For quick build times. TailwindCSS for looks. Login: user@gmail.com user1234"
+    ,"A web for a local christian group made together with Radim Kotajny. The web is built with React, Next.js, Sanity.io, TailwindCSS. Still in beta.",
+    "This portfolio you are currently looking at. Made with React, Next.js, TailwindCSS."
   ];
-  const projectArrLink = ["https://christmas-quiz-ten.vercel.app/"];
+  const projectArrLink = ["https://christmas-quiz-ten.vercel.app/", "https://dorost-tranovice.cz"];
   return projectsArrName.map((element, id) => (
     <motion.div
       className="flex flex-col md:flex-row p-10 text-center md:text-left max-h-[500px]"
@@ -19,25 +21,28 @@ const projects = () => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-      <div className="rounded-md overflow-hidden basis-1/2">
+      <div className="overflow-hidden rounded-md basis-1/2">
         <Image
-          src={projectsArrImage[0]}
+          src={projectsArrImage[id]}
           width={500}
           height={500}
           alt="Project Image"
-          className="px-2 m-auto md:px-5 bg-cover mb-3 md:mb-0"
+          className="px-2 m-auto mb-3 bg-cover md:px-5 md:mb-0"
         />
       </div>
-      <div className="basis-1/2 my-auto ">
+      <div className="my-auto basis-1/2 ">
         <p className="text-3xl text-center">
           <b>{element}</b>
         </p>
         <p className="text-xl text-center">
-          <i>{projectsArrDescrition[id]}</i>
+          <i>{projectsArrDescription[id]}</i>
         </p>
-        <span className="flex m-auto bg-white rounded-md w-[100px] mt-3 py-1">
-          <a href={projectArrLink[id]} className="text-5xl text-black m-auto" ><FaGithub/></a>
-        </span>
+        <a href={projectArrLink[id]} className="text-5xl text-black" >
+          <span className="flex m-auto bg-white rounded-md w-[100px] mt-3 py-1">
+
+            <HiGlobeAlt size={48} className="m-auto"/>
+          </span>
+        </a>
       </div>
     </motion.div>
   ));
