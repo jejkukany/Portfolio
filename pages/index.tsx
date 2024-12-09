@@ -164,10 +164,9 @@ export default function Home() {
               className="my-auto"
             >
               <p className="text-xl md:text-3xl text-center px-5 md:max-w-xl m-auto mb-10 md:mb-auto">
-                Hi, I&apos;m a 16 year old highschool student studying at
-                <a href="https://tria-tr.cz"> TRIA</a> intrested in coding,
-                making projects, video editing and live production. I love to
-                explore new ways of doing things and constantly pushing myself
+                I'm into coding and love building web apps, especially using
+                React and Next.js. I enjoy experimenting with new ideas,
+                learning cool tools, and creating projects that push my skills
                 further.
               </p>
             </motion.span>

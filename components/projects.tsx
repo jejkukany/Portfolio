@@ -2,16 +2,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { HiGlobeAlt } from "react-icons/hi";
 
-
 const projects = () => {
-  const projectsArrName = ["Christmas quiz", "Dorost Třanovice Web", "Portfolio"];
-  const projectsArrImage = ["/ChristmasQuiz.png", "/DorostWeb.jpeg", "/Portfolio.jpeg"];
+  const projectsArrName = ["Christmas quiz", "Portfolio"];
+  const projectsArrImage = ["/ChristmasQuiz.png", "/Portfolio.jpeg"];
   const projectsArrDescription = [
-    "A Quiz about the typical Czech Christmas. Firebase is used as the authentication and DB service. React for frontend. Vite For quick build times. TailwindCSS for looks. Login: user@gmail.com user1234"
-    ,"A web for a local christian group made together with Radim Kotajny. The web is built with React, Next.js, Sanity.io, TailwindCSS. Still in beta.",
-    "This portfolio you are currently looking at. Made with React, Next.js, TailwindCSS."
+    "A Quiz about the typical Czech Christmas. Firebase is used as the authentication and DB service. React for frontend. Vite For quick build times. TailwindCSS for looks. Login: user@gmail.com user1234",
+    "This portfolio you are currently looking at. Made with React, Next.js, TailwindCSS.",
   ];
-  const projectArrLink = ["https://christmas-quiz-ten.vercel.app/", "https://dorost-tranovice.cz"];
+  const projectArrLink = ["https://christmas-quiz-ten.vercel.app/"];
   return projectsArrName.map((element, id) => (
     <motion.div
       className="flex flex-col md:flex-row p-10 text-center md:text-left max-h-[500px]"
@@ -37,10 +35,9 @@ const projects = () => {
         <p className="text-xl text-center">
           <i>{projectsArrDescription[id]}</i>
         </p>
-        <a href={projectArrLink[id]} className="text-5xl text-black" >
+        <a href={projectArrLink[id]} className="text-5xl text-black">
           <span className="flex m-auto bg-white rounded-md w-[100px] mt-3 py-1">
-
-            <HiGlobeAlt size={48} className="m-auto"/>
+            <HiGlobeAlt size={48} className="m-auto" />
           </span>
         </a>
       </div>
